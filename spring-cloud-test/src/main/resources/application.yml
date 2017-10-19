@@ -1,0 +1,14 @@
+server:
+  port: ${PORT:8080}
+
+zuul:
+  host:
+    connect-timeout-millis: 5000
+    socket-timeout-millis: 10000
+  routes:
+    test:
+      path: /test/**
+      serviceId: test
+      url: http://localhost:3010
+
+welcome.message: Hello
